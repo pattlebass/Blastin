@@ -11,8 +11,10 @@ func _ready():
 	$"floor detection/RayCast2D2".add_exception(self)
 	$"floor detection/RayCast2D3".add_exception(self)
 
-#func _process(delta):
-#	pass
+func _process(delta):
+	#Debug
+	if Input.is_action_pressed("debug"):
+		mode = RigidBody2D.MODE_RIGID
 
 func _integrate_forces(state):
 	
